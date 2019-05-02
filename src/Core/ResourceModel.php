@@ -69,7 +69,9 @@ class ResourceModel
 	}
 	public function search($table, $name)
 	{
-		$sql = $sql = "SELECT * FROM $table WHERE name '%$name%'";
-		echo $sql;
+		$sql = $sql = "SELECT * FROM $table WHERE name LIKE '%$name%'";
+		$req = Database::getBdd()->prepare($sql);
+        $req->execute();
+        return $req->fetchAll();
 	}
 }

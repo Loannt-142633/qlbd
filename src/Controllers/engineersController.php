@@ -67,6 +67,14 @@ class engineersController extends Controller
         $this->engineerRepository->delete($id);
         header("Location: " . WEBROOT . "engineers/index");
     }
+    public function search()
+    {   
+        if (isset($_POST['search'])) {
+            $d['engineers'] = $this->engineerRepository->search($_POST['search']);
+        }
+        $this->set($d);
+        $this->render("search");
+    }
 
 }
 ?>

@@ -1,7 +1,7 @@
 <h1>&#128119; Công nhân</h1>
 <div class="row col-md-12 centered">
     <div class="container d-flex justify-content-end">
-        <form class="form-inline" action="#" method="POST">
+        <form class="form-inline" action="/oop/src/workers/search" method="POST">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search">
             <button class="btn btn-success" type="submit">Search</button>
         </form>

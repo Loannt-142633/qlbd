@@ -37,4 +37,8 @@ class EngineerResourceModel extends ResourceModel
 	{
         parent::edit($table, $model);
 	}
+	public function searchEngineer($table, $name)
+	{
+		return parent::search($table, $name);
+	}
 }

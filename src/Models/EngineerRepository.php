@@ -34,5 +34,9 @@ class EngineerRepository
 	{
 		$this->engineerResourceModel->editEngineer('engineers', $engineer);
 	}
+	public function search($name)
+	{
+        return $this->engineerResourceModel->searchEngineer('engineers', $name);
+	}
 
 }

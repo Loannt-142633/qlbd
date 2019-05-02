@@ -67,7 +67,7 @@ class workersController extends Controller
         $this->workerRepository->delete($id);
         header("Location: " . WEBROOT . "workers/index");
     }
-    public function search($name)
+    public function search()
     {   
         if (isset($_POST['search'])) {
             $d['workers'] = $this->workerRepository->search($_POST['search']);
